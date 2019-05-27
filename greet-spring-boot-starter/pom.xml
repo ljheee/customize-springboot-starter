@@ -12,4 +12,23 @@
     <artifactId>greet-spring-boot-starter</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <!--可以在生成的jar中生成 /META-INF/spring-configuration-metadata.json 文件
+    这个文件的作用是为源文件中被标记了@ConfigurationProperties的属性类生成相应的提示，
+    这样IDE就可以自动为你在使用该jar的时候提供智能提示。-->
+        <!--demo工程用的application.properties，生成spring-configuration-metadata.properties-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 </project>
